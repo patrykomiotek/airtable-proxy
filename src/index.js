@@ -4,7 +4,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 const winston = require('winston');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const logger = winston.createLogger({
   level: 'info',
@@ -32,10 +32,6 @@ app.use(
     logLevel: 'debug',
   })
 );
-
-app.get('/', (_req, res) => {
-  res.send('Airtable Node.js proxy is using /api/** endpoint');
-})
 
 app.listen(PORT, (error) => {
   if (error) {

@@ -20,13 +20,13 @@ API key can be generated [here](https://airtable.com/account).
 To launch application type:
 
 ```bash
-yarn start
+yarn dev
 ```
 
 or
 
 ```bash
-npm start
+npm dev
 ```
 
 ## How proxy works?
@@ -42,10 +42,10 @@ curl "https://api.airtable.com/v0/YOUR_DATABASE_ID/offers?maxRecords=3&view=defa
 
 This Airtable Proxy app allows you to automatically create url to the database (`https://api.airtable.com/v0/YOUR_DATABASE_ID`) and pass authorization header (`Authorization: Bearer YOUR_API_KEY`) using your credentials specified in `.env` file.
 
-When you have an app running on port 3000, then instead of requesting Airtable explicitly you can pass your requests using `/api` endpoint:
+When you have an app running on port 3001, then instead of requesting Airtable explicitly you can pass your requests using `/api` endpoint:
 
 ```bash
-http://localhost:3000/api/offers?maxRecords=3&view=default
+http://localhost:3001/api/offers?maxRecords=3&view=default
 ```
 
 which prevents to snoop your database credentials.
